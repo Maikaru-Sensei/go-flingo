@@ -28,7 +28,8 @@ type Book struct {
 }
 
 var books = map[string]Book{
-	"1": {ID: "1", Title: "1984", Description: "Dystopian novel", Url: "veryawesomebook.pdf"},
+	"1": {ID: "1", Title: "Tom Turbo: Spaghetti Spuk", Description: "Tom Turbo", Url: "/books/tomturbo.pdf"},
+	"2": {ID: "2", Title: "Drei ???: Panik im Paradies", Description: "die Drei ???", Url: "/books/drei.pdf"},
 }
 
 func (bookService) GetBooks(ctx context.Context) ([]Book, error) {
