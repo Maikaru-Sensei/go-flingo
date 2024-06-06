@@ -19,6 +19,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/progress/", progressHandler)
 
-	println("Starting server on port 8082")
+	println("Starting Progress Service on port 8082")
 	log.Fatal(http.ListenAndServe(":8082", mux))
 }

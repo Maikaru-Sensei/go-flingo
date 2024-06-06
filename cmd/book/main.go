@@ -19,6 +19,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/books/", bookHandler)
 
-	println("Starting server on port 8081")
+	println("Starting Book Service on port 8081")
 	log.Fatal(http.ListenAndServe(":8081", mux))
 }
