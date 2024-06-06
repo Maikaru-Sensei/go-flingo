@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  book-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.book
+    ports:
+      - "8081:8081"
+    networks:
+      - book-network
+    depends_on:
+      - progress-service
+
+  progress-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.progress
+    ports:
+      - "8082:8082"
+    networks:
+      - book-network
+
+networks:
+  book-network:
+    driver: bridge
